@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@200&display=swap');
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: rgba(0, 119, 255, 0.6);
+  --room-a: #272727cc;
+  --room-hover: #272727a4;
+  --font-color-h2: rgb(44, 44, 44);
+  --font-color-p: rgba(51, 51, 51, 0.8);
+  --size-h2: 38px;
+  --size-p: 22px;
+}
+
+body {
+  font-family: 'Source Sans Pro', 'sans-serif';
+  overflow-x: hidden;
+}
+
+img {
+  object-fit: cover;
+}
+
+main {
+  padding: 30px;
+}
+
+/* MENU */
+
+#menu-h {
+  position: fixed;
+  width: 100%;
+  height: 3.75rem;
+  padding: 1.25rem;
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+#pousada {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+span {
+  color: rgba(0, 119, 255, 0.5);
+}
+
+#menu-h,
+ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+}
+
+#menu-h ul {
+  margin-right: 0.625rem;
+}
+
+#menu-h ul,
+#text-top {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#menu-h ul li a,
+#text-top a {
+  color: #353535;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.25rem;
+}
+
+#menu-h ul li a:hover {
+  color: #fff;
+  background-color: rgb(0, 125, 210);
+  transition: background 0.6s;
+}
+
+/* MIDLE-TEXT */
+
+#fundo {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(assets/img-fundo.jpg) no-repeat center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center h1,
+.center p {
+  user-select: none;
+}
+
+.center {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(2, 122, 76, 0.5);
+  border: 1px ridge rgba(255, 255, 255, 0.4);
+  width: 27rem;
+  height: 11.25rem;
+  padding: 1.25rem;
+  top: 40%;
+  margin: 0 auto;
+}
+
+.center h1 {
+  font-size: 3.125rem;
+}
+.center p {
+  font-size: var(--size-p);
+}
+
+/* WELCOME-SECTION */
+
+#well {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  margin: 60px auto;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome p {
+  color: var(--font-color-p);
+  font-size: var(--size-p);
+}
+
+.welcome h2 {
+  color: var(--font-color-h2);
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: var(--size-h2);
+  margin-bottom: 3.125rem;
+}
+
+/* LINE1 */
+
+.line1 {
+  display: flex;
+  border-bottom: 0.2px solid rgba(102, 102, 102, 0.3);
+  width: 60vw;
+
+  box-shadow: 0 4px 25px black;
+  margin: 0 auto;
+}
+
+/* ROOMS */
+
+.rooms {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  margin: 60px auto;
+}
+
+.room a img {
+  width: 16.25rem;
+  border-radius: 5px;
+  border-bottom: solid 1px var(--room-a);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transition: ease-in-out 0.3s;
+}
+
+.room a {
+  color: var(--room-a);
+  font-family: 'Georama', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 1.25rem;
+}
+
+.room a p {
+  margin: 1.25rem;
+}
+
+.room a:hover {
+  color: var(--room-hover);
+  transition: 0.1s;
+}
+
+.room a:hover img,
+.room a img:hover {
+  filter: opacity(80%);
+}
+
+/* ROTA */
+
+#rota {
+  text-align: center;
+  width: 100%;
+  margin: 60px auto;
+}
+
+#rota h2 {
+  font-size: var(--size-h2);
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  color: var(--font-color-h2);
+}
+
+#rota p {
+  font-size: var(--size-p);
+  color: var(--font-color-p);
+}
+
+#rota-iframe {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 25rem;
+  background-color: rgb(246, 246, 246);
+  padding: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 5.625rem;
+}
+
+/* ABOUT */
+.about {
+  margin-top: 5.625rem;
+}
+
+#about-box {
+  text-align: center;
+}
+
+#about-box h2 {
+  margin: 2.5rem 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: var(--size-h2);
+  color: var(--font-color-h2);
+}
+
+#about-box p {
+  color: var(--font-color-p);
+  font-size: var(--size-p);
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 3.125rem;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: top;
+  width: 31.25rem;
+}
+
+.content img {
+  width: 12.5rem;
+  height: 9.375rem;
+  border-radius: 5px;
+  margin-top: 2.5rem;
+}
+
+.content p {
+  width: 15.75rem;
+}
+
+.sub-content {
+  margin-top: 2.5rem;
+}
+
+.sub-content h3 {
+  margin-bottom: 1.25rem;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: rgb(43, 121, 91);
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+
+footer section #contact_us {
+  margin: 1.25rem;
+  display: flex;
+  align-items: center;
+  font-size: var(--size-p);
+  width: 11.25rem;
+}
+
+footer section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+  padding-top: 0.312rem;
+}
+
+footer .info a,
+footer .info #phone {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: 1.875rem 0;
+  width: 12.5rem;
+  height: 3.75rem;
+  padding-bottom: 5px;
+  border-bottom: solid 2px rgba(255, 255, 255, 0);
+}
+
+footer .info a:hover {
+  border-bottom: solid 2px white;
+  transition: 0.4s;
+}
+
+footer .info a img,
+#phone img {
+  margin: 0;
+  width: 1.875rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer #copy {
+  width: 100%;
+  height: 3.125rem;
+  margin: 0.625rem auto;
+  font-weight: 600;
+  text-align: center;
+  border-top: solid 2px rgba(0, 0, 0, 0.1);
+}
+
+footer #copy p {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 511px) {
+  .link-topo {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 435px) {
+  .center {
+    width: 310px;
+    height: 130px;
+  }
+  .center h1 {
+    font-size: 31px;
+  }
+
+  .center p {
+    font-size: 16px;
+  }
+
+  footer section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 375px) {
+  #menu-h ul {
+    display: none;
+  }
+
+  .center {
+    width: 290px;
+    height: 150px;
+  }
+  .center h1 {
+    font-size: 28px;
+  }
+}
