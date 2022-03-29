@@ -17,6 +17,10 @@
   --size-p: 22px;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Source Sans Pro', 'sans-serif';
   overflow-x: hidden;
@@ -62,6 +66,11 @@ ul {
   background-color: rgb(255, 255, 255);
 }
 
+#menu-h {
+  width: 100vw;
+  overflow: hidden;
+}
+
 #menu-h ul {
   margin-right: 0.625rem;
 }
@@ -91,9 +100,10 @@ ul {
 
 #fundo {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: url(assets/img-fundo.jpg) no-repeat center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,14 +179,15 @@ ul {
 
 .rooms {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
   flex-wrap: wrap;
 
   margin: 60px auto;
 }
 
 .room a img {
-  width: 16.25rem;
+  width: 280px;
   border-radius: 5px;
   border-bottom: solid 1px var(--room-a);
   border-top-left-radius: 5px;
@@ -265,35 +276,28 @@ ul {
 #content {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 3.125rem;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .content {
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
+  align-items: center;
   justify-content: space-evenly;
-  align-items: top;
-  width: 31.25rem;
+  margin: 10px;
+  width: 500px;
+  min-height: 150px;
+
 }
 
 .content img {
-  width: 12.5rem;
-  height: 9.375rem;
-  border-radius: 5px;
-  margin-top: 2.5rem;
-}
-
-.content p {
-  width: 15.75rem;
+  width: 180px;
+  height: 150px;
 }
 
 .sub-content {
-  margin-top: 2.5rem;
-}
-
-.sub-content h3 {
-  margin-bottom: 1.25rem;
+  width: 280px;
 }
 
 /* FOOTER */
@@ -361,13 +365,37 @@ footer #copy p {
   margin-top: 1.25rem;
 }
 
-@media (max-width: 511px) {
-  .link-topo {
+/* RESPONSIVE */
+
+@media (max-width: 1103px) {
+  #content {
+    align-items: center;
     justify-content: center;
+  }
+
+  .content {
+    margin: 25px 0;
   }
 }
 
-@media (max-width: 435px) {
+@media (max-width: 960px) {
+  .rooms {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 519px) {
+  .link-topo {
+    justify-content: center;
+  }
+
+  .sub-content {
+    width: 180px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 450px) {
   .center {
     width: 310px;
     height: 130px;
@@ -394,8 +422,8 @@ footer #copy p {
   }
 
   .center {
-    width: 290px;
-    height: 150px;
+    width: 80%;
+    height: 160px;
   }
   .center h1 {
     font-size: 28px;
